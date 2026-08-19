@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Page</title>
+    <link rel="stylesheet" href="styles/styles.css" >
     <style>
         /* Tag Selector */
         p{
@@ -29,5 +30,9 @@
     <p class="bca"> This is  paragraph 1. </p>
     <p style="color: blue;"> This is another paragraph. </p>
     <p id="paragraph3" class="bca"> This is another paragraph three. </p>
+
+    <div class="bcaDiv">
+        <p id="paragraph4">This is a paragraph inside a div.</p>
+    </div>
 </body>
 </html>
