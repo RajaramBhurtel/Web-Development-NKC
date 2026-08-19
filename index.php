@@ -20,3 +20,5 @@ echo "This is a PHP file that outputs HTML content.";
 
 
 ?>
+
+<a href="registration.php">Go to Registration Page</a>
