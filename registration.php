@@ -24,15 +24,62 @@
 </head>
 <body>
     <h1>Registration Page</h1>
-    <!-- //Inline CSS Example -->
-    <!-- <p  style="color: blue;">Welcome to the registration page. Please fill out the form below to register.</p> -->
+    <form>
+        <div>
+            <label for="FullName"> Name: </label>
+            <input type="text" id="FullName" name="FullName" placeholder="Enter your name">
+        </div>
+        <div>
+            <label for="email"> Email: </label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+        </div>
+        <div>
+            <label for="phone"> Phone: </label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your Phone">
+        </div>
+        <div>
+            <label for="dob"> DOB: </label>
+            <input type="date" id="dob" name="dob">
+        </div>
+        <div>
+            <label for="time"> Time: </label>
+            <input type="time" id="time" name="time">
+        </div>
+        <div>
+            <label for="Color"> Color: </label>
+            <input type="color" id="Color" name="Color">
+        </div>
+        <div>
+            <label for="gender"> Gender: </label>
 
-    <p class="bca"> This is  paragraph 1. </p>
-    <p style="color: blue;"> This is another paragraph. </p>
-    <p id="paragraph3" class="bca"> This is another paragraph three. </p>
+            <input type="radio" id="gender" name="gender" value="male">
+            <label for="gender"> Male </label>
+            <input type="radio" id="gender" name="gender" value="female">
+            <label for="gender"> Female </label>
+            <input type="radio" id="gender" name="gender" value="others">
+            <label for="gender"> Others </label>
 
-    <div class="bcaDiv">
-        <p id="paragraph4">This is a paragraph inside a div.</p>
-    </div>
+        </div>
+        <div>
+            <label for="hobbies"> Hobbies: </label>
+
+            <input type="checkbox" id="hobbies" name="hobbies" value="coding">
+            <label for="hobbies"> Coding </label>
+            <input type="checkbox" id="hobbies" name="hobbies" value="movie">
+            <label for="hobbies"> Movie </label>
+            <input type="checkbox" id="hobbies" name="hobbies" value="singing">
+            <label for="hobbies"> Singing </label>
+
+        </div>
+        <div>
+            <label for="Color"> Color: </label>
+            <input type="color" id="Color" name="Color">
+        </div>
+
+        <div>
+            <input type="submit" id="submit" name="submit" value="Register">
+        </div>
+
+    </form>
 </body>
 </html>
