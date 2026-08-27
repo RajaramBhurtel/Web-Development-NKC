@@ -18,7 +18,7 @@
         <a href="#" class="nav-link">Login</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Sign Up</a>
+        <a href="./registration.php" class="nav-link">Sign Up</a>
       </li>
     </ul>
   </nav>
