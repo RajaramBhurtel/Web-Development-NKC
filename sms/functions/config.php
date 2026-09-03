@@ -10,10 +10,10 @@ if(!$conn){
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "Insert into users (fname, email, password) values ('Sabin', 'sabin@email.com', '12345')";
+// $sql = "Insert into users (fname, email, password) values ('Sabin', 'sabin@email.com', '12345')";
 
-if(mysqli_query($conn, $sql)){
-    echo "New record created successfully";
-} else {
-    echo "Error inserting record";
-}
+// if(mysqli_query($conn, $sql)){
+//     echo "New record created successfully";
+// } else {
+//     echo "Error inserting record";
+// }
