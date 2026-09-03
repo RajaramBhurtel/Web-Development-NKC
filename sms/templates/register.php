@@ -6,7 +6,9 @@
   <div class="card">
     <div class="card-body register-card-body">
       <p class="login-box-msg">Register a new membership</p>
-
+      <?php
+      print_r($_SESSION['errors']);
+      ?>
       <form action="./functions/register.php" method="post">
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Full name" name="fname">

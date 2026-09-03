@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include 'config.php';
 $errors=[];
 
@@ -14,15 +15,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $errors["fname"] = "First name must be at least 3 characters!";
     }
 
-    if($password == $confirm_password){
+    if(empty($errors)){
         $sql = "Insert into users (fname, email, password) values ('$fname', '$email', '$password')";
-
         if(mysqli_query($conn, $sql)){
             echo "New record created successfully";
         } else {
-            echo "Error inserting record";
+            $errors["signup"] = "Error creating user";
         }
-    }  else {
-        echo "Passwords do not match!";
-    } 
+    }
+
+    $_SESSION['errors'] = $errors;
+    header("Location: ../registration.php");
+    exit();
+
+
+    // if($password == $confirm_password){
+    //     
+    // }  else {
+    //     echo "Passwords do not match!";
+    // } 
 }
