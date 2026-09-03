@@ -15,6 +15,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $errors["fname"] = "First name must be at least 3 characters!";
     }
 
+    if(empty($email)){
+        $errors["email"] = "Email is required!";
+    }elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $errors["email"] = "Invalid email format!";
+    }
+    if(empty($password)){
+        $errors["password"] = "Password is required!";
+    }elseif(strlen($password) < 8){
+        $errors["password"] = "Password must be at least 8 characters!";
+    }
+
+    if(empty($confirm_password)){
+        $errors["confirm_password"] = "Please confirm your password!";
+    }elseif($password !== $confirm_password){
+        $errors["confirm_password"] = "Passwords do not match!";
+    }
+
     if(empty($errors)){
         $sql = "Insert into users (fname, email, password) values ('$fname', '$email', '$password')";
         if(mysqli_query($conn, $sql)){
