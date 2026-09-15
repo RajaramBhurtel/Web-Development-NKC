@@ -26,11 +26,11 @@
               <div class="card-body box-profile">
                 <div class="text-center">
                   <img class="profile-user-img img-fluid img-circle"
-                       src="../../dist/img/user4-128x128.jpg"
+                       src="./assets/user.jpg"
                        alt="User profile picture">
                 </div>
 
-                <h3 class="profile-username text-center">Nina Mcintire</h3>
+                <h3 class="profile-username text-center"><?php echo $_SESSION['username']; ?></h3>
 
                 <p class="text-muted text-center">Software Engineer</p>
               </div>
@@ -48,14 +48,14 @@
                 <strong><i class="fas fa-book mr-1"></i> Education</strong>
 
                 <p class="text-muted">
-                  B.S. in Computer Science from the University of Tennessee at Knoxville
+                  BCA from the Tribhuvan University at Kathmandu
                 </p>
 
                 <hr>
 
                 <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
 
-                <p class="text-muted">Malibu, California</p>
+                <p class="text-muted">Kalanki, Kathmandu</p>
 
                 <hr>
 
@@ -66,7 +66,10 @@
                   <span class="tag tag-success">Coding</span>
                   <span class="tag tag-info">Javascript</span>
                   <span class="tag tag-warning">PHP</span>
-                  <span class="tag tag-primary">Node.js</span>
+                  <span class="tag tag-primary">C</span>
+                  <span class="tag tag-primary">C++</span>
+                  <span class="tag tag-primary">HTML</span>
+                  <span class="tag tag-primary">CSS</span>
                 </p>
 
                 <hr>

@@ -5,7 +5,7 @@ include('./functions/helper.php');
 include('./templates/header.php');
 include('./templates/navbar.php');
 ?>
-<div class="register-page">
+<div class="wrapper">
 
 <?php
 include('./templates/profile.php');
