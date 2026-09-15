@@ -18,6 +18,10 @@
       <?php
       if(is_user_logged_in()):
       ?>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="./profile.php" class="nav-link">Profile</a>
+      </li>
+
         <li class="nav-item d-none d-sm-inline-block">
         <a href="./functions/logout.php" class="nav-link">Logout</a>
       </li>
