@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Managemnet System</title>
+    <title>Student Management System</title>
     <link rel="stylesheet" href="./assets/adminlte.css">
 </head>
-<body class="layout-fixed bg-body-tertiary">
+<body class="bg-body-tertiary layout-top-nav">
+    <div class="wrapper">

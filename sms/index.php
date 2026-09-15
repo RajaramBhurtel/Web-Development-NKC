@@ -10,9 +10,31 @@ if(!is_user_logged_in()){
 include('./templates/header.php');
 include('./templates/navbar.php');
 
-echo "Student Managemnet System";
-echo "<br>";
-echo "Welcome $_SESSION[username]";
+?>
+    <div class="content-wrapper">
 
+        <div class="content">
+            <div class="container">
+                
+                <div class="text-center py-5">
+                <h1 class="font-weight-light">
+                    Student Management System
+                </h1>
+
+                <p class="text-muted mt-3">
+                    Welcome back, <?= htmlspecialchars($_SESSION['username']) ?>.
+                </p>
+
+                <a href="profile.php" class="btn btn-primary mt-3">
+                    Manage Profile
+                </a>
+            </div>
+
+            </div>
+        </div>
+
+    </div>
+
+<?php
 include('./templates/foot.php');
 ?>
