@@ -31,12 +31,13 @@
                         $result = mysqli_query($conn, $sql);
                         $i=1;
                         while ($user =mysqli_fetch_assoc($result)): 
+                            $role = $user['user_role'] == 1 ? 'User' : 'Admin';
                         ?>
                         <tr>
                             <td><?php echo $i++; ?></td>
                             <td><?php echo $user['fname']; ?></td>
                             <td><?php echo $user['email']; ?></td>
-                            <td><?php echo $user['user_role']; ?></td>
+                            <td><?php echo $role; ?></td>
                             <td><?php echo $user['created_at']; ?></td>
                             <td>
                                 <a href="edit_user.php?id=<?php echo $user['id']; ?>" class="btn btn-primary">Edit</a>
