@@ -15,19 +15,34 @@ include('./templates/navbar.php');
     <div class="content">
         <div class="container">
             <div class="row justify-content-center">
+                
                 <div class="col-md-8">
+    <?php
 
+                        if(isset($_SESSION['errors'])){
+                            $errors = $_SESSION['errors'];
+                            foreach($errors as $error){
+                                echo "<div class='alert alert-danger'>$error</div>";
+                            }
+                            unset($_SESSION['errors']);
+                        }
+                        if(isset($_GET['success']) && $_GET['success'] == 1){
+                                echo "<div class='alert alert-success'>User Updated successfully.</div>";
+                            }
+                        ?>
                     <div class="card card-primary mt-4">
 
                         <div class="card-header">
                             <h3 class="card-title">Edit User</h3>
                         </div>
+                    
 
                         <form method="post" action="./functions/edit_user.php">
 
                             <div class="card-body">
 
                                 <div class="form-group">
+                                    <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
                                     <label for="name">Name</label>
                                     <input
                                         type="text"
