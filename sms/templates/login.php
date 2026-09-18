@@ -10,7 +10,7 @@
       // print_r($_SESSION['errors']);
       if(isset($_SESSION['errors']) && !empty($_SESSION['errors'])): ?>
       <div class="alert alert-danger">
-        <ul>
+        <ul style="list-style-type: none; padding-left: 0;">
           <?php foreach($_SESSION['errors'] as $error): ?>
           <li><?php echo $error; ?></li> 
           <?php endforeach; ?>
