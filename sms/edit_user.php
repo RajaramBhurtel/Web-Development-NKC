@@ -2,8 +2,16 @@
 session_start();
 include('./functions/helper.php');
 include('./functions/config.php');
+if(!is_user_logged_in()){
+    header("Location: login.php");
+    exit();
+}
 
 $id = $_GET['id'] ?? null;
+if(!$id){
+    header("Location: users.php");
+    exit();
+}
 $sql = "SELECT * FROM users WHERE id = $id";
 $result = mysqli_query($conn, $sql);
 $user = mysqli_fetch_assoc($result);

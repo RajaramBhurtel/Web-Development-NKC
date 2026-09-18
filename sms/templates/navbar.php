@@ -5,6 +5,9 @@
     </a>
     <!-- Left navbar links -->
     <ul class="navbar-nav ml-auto">
+      <?php
+      if(is_user_logged_in()):
+      ?>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="./index.php" class="nav-link">Home</a>
       </li>
@@ -16,6 +19,7 @@
       </li>
 
       <?php
+      endif;
       if(is_admin()): ?>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="./users.php" class="nav-link">Users</a>
